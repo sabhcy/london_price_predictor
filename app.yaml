@@ -1,0 +1,14 @@
+command: ["streamlit", "run", "app.py"]
+
+env:
+  # --- Optional: read live data from Unity Catalog instead of the bundled CSV ---
+  # - name: HOUSING_TABLE
+  #   value: "main.housing.london_sales"
+  # - name: DATABRICKS_WAREHOUSE_ID
+  #   valueFrom: "sql-warehouse"        # app resource key (added in the Apps UI)
+
+  # --- Optional: use the MLflow model served by notebooks/01_train_model.py ---
+  # - name: SERVING_ENDPOINT
+  #   value: "london-house-price"
+  - name: STREAMLIT_BROWSER_GATHER_USAGE_STATS
+    value: "false"
